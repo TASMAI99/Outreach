@@ -1,0 +1,145 @@
+@use "variables" as *;
+
+.welcome-box {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 30px 16px;
+  border-radius: 12px;
+  background-image: url("../../assets/images/outreach_hub_welcome_box_background.png");
+  background-size: cover;
+  color: black;
+  text-align: center;
+ 
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 24px 16px;
+  background-image: url("../../assets/images/home_background.jpg");
+  background-size: cover;
+}
+
+.welcome-box h1 {
+  margin-bottom: 5px;
+}
+
+.welcome-logo {
+  width: 90px;
+  padding: 8px;
+  border-radius: 50%;
+  background: $white;
+}
+
+.section-heading {
+  margin: 30px 0 15px;
+}
+
+.chart-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  color: #d4a24c;
+}
+
+.chart-section img {
+  width: 100%;
+}
+
+.chart-section .card {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #3a0a14;
+  box-shadow: $shadow;
+}
+
+.tables-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.tables-section .card {
+  background: linear-gradient(145deg, #4a0e1c, #260610);
+  border: 1.5px solid #d4a24c;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.tables-section h3 {
+  color: #f2c96b;
+  margin: 0 0 16px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #f1e3c0;
+}
+
+.table th {
+  text-align: left;
+  padding: 10px;
+  color: #f2c96b;
+  border-bottom: 1px solid #d4a24c;
+}
+
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(241, 227, 192, 0.15);
+}
+
+.table tbody tr:hover {
+  background: rgba(212, 162, 76, 0.12);
+}
+
+.tag {
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: #f2c96b;
+  border: 1px solid #d4a24c;
+}
+
+.status {
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.status-completed { color: #8fe0b0; background: rgba(86, 170, 120, 0.2); }
+.status-running   { color: #f2c96b; background: rgba(242, 201, 107, 0.2); }
+.status-draft     { color: #c5cbe0; background: rgba(160, 170, 200, 0.2); }
+
+h2{
+  color: $gold-light;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 768px) {
+  .welcome-box {
+    flex-direction: row;
+    padding: 40px;
+    text-align: left;
+  }
+
+  .chart-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .tables-section {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .chart-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,53 @@
+// ===== HOME / NAVBAR / LOGIN variables (first set, unchanged) =====
+
+// main colors
+$main-color: #6d28d9;
+$main-color-dark: #4c1d95;
+
+// page colors
+$bg-color: #f6f1e7;
+$white: #ffffff;
+$text-color: #1f2937;
+$gray-text: #6b7280;
+$border-color: #e5dccb;
+
+// Gryffindor red
+$red: #ae2012;
+$red-dark: #7f1d1d;
+
+$green: #16a34a;
+$orange: #d97706;
+
+// Harry Potter colors
+$midnight: #140a26;
+$purple-dark: #3b185f;
+$purple: #6d28d9;
+$purple-light: #8b5cf6;
+$gold: #d4af37;
+$gold-light: #f5d97a;
+$gold-dark: #a8841a;
+$crimson: #9b1c1c;
+
+$font: "Segoe UI", Arial, sans-serif;
+$radius: 8px;
+$shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+
+// ===== CONTACTS PAGES variables (second set, conflicting names renamed with c-) =====
+
+// these names did not conflict, so they stay the same
+$navy: #0b0f2e;
+$wine: #3a0a14;
+$wine-light: #4a0e1c;
+$wine-dark: #260610;
+$cream: #f1e3c0;
+$bp: 768px;
+$font-serif: Georgia, "Times New Roman", serif;
+
+// these names conflicted, so they are renamed
+$c-gold: #d4a24c;
+$c-gold-light: #f2c96b;
+$c-red: #a3202f;
+$c-gray-text: #c5cbe0;
+$c-border-color: rgba($c-gold, 0.35);
+$c-radius: 12px;

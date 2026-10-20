@@ -1,0 +1,103 @@
+@use "variables" as *;
+
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+
+  background-size: cover;
+  background-position: center;
+  animation: change-background 9s infinite;
+}
+
+@keyframes change-background {
+  0% {
+    background-image: url("../../assets/images/login-1.jpg");
+  }
+  33% {
+    background-image: url("../../assets/images/login-2.jpeg");
+  }
+  66% {
+    background-image: url("../../assets/images/login-3.jpeg");
+  }
+  100% {
+    background-image: url("../../assets/images/login-1.jpg");
+  }
+}
+
+.login-box {
+  width: 100%;
+  max-width: 420px;
+  padding: 30px 24px;
+  color: blueviolet;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  background-color: transparent;   
+  box-shadow: none;                
+  border: none;                  
+}
+
+.login-logo {
+  width: 150px;
+  margin: 0 auto 15px;
+}
+
+.login-title {
+  margin-bottom: 5px;
+  text-align: center;
+  color: blueviolet;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.login-subtitle {
+  margin: 0 0 25px;
+  text-align: center;
+  color: black;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 13px 20px;
+
+  /* Enchanted Purple Gradient */
+  background: linear-gradient(135deg, #3B185F, #B794F4);
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  /* Magical Glow */
+  box-shadow: 0 4px 15px rgba(183, 148, 244, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+/* Magical Hover Effect */
+.login-btn:hover {
+  background: linear-gradient(135deg, #5B21B6, #D8B4FE);
+
+  box-shadow:
+    0 0 10px rgba(183, 148, 244, 0.4),
+    0 0 25px rgba(183, 148, 244, 0.25);
+
+  transform: translateY(-2px);
+}
+
+.login-box input {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid white;
+}
+
+@media (min-width: 576px) {
+  .login-box {
+    padding: 40px;
+  }
+}

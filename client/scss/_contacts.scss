@@ -1,0 +1,228 @@
+@use "variables" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+.contacts-page{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  color: $cream;
+  background: linear-gradient(rgba($navy, 0.65), rgba($navy, 0.65)),
+    url("../assets/images/home-background.png") center / cover fixed $navy;
+}
+
+.container {
+    flex: 1;
+    width: 100%;
+  }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h3,
+.logo {
+  font-family: $font-serif;
+  font-weight: 500;
+  color: $c-gold-light;
+}
+
+/* ---------- layout ---------- */
+
+.page-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.card {
+  padding: 24px;
+  border: 1.5px solid $c-gold;
+  border-radius: $c-radius;
+  background: linear-gradient(145deg, $wine-light, $wine-dark);
+  color: $cream;
+  box-shadow: $shadow;
+}
+
+/* ---------- buttons ---------- */
+.btn,
+.add-contact {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid $c-gold;
+  border-radius: 8px;
+  font: inherit;
+  cursor: pointer;
+  color: $c-gold-light;
+  background: rgba($c-gold, 0.12);
+
+  &:hover {
+    background: rgba($c-gold, 0.3);
+  }
+}
+
+.add-contact {
+  color: $wine-dark;
+  background: $c-gold-light;
+
+  &:hover {
+    background: $c-gold;
+  }
+}
+
+.btn-small {
+  padding: 5px 12px;
+  font-size: 14px;
+}
+
+.btn-red {
+  color: #ffb3bb;
+  border-color: $c-red;
+  background: rgba($c-red, 0.25);
+
+  &:hover {
+    background: rgba($c-red, 0.5);
+  }
+}
+
+/* ---------- tables ---------- */
+.table-box {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    text-align: left;
+    padding: 10px;
+    color: $c-gold-light;
+    border-bottom: 1px solid $c-gold;
+  }
+
+  td {
+    padding: 10px;
+    border-bottom: 1px solid rgba($cream, 0.15);
+  }
+
+  tbody tr:hover {
+    background: rgba($c-gold, 0.1);
+  }
+}
+
+.tag {
+  padding: 2px 10px;
+  border: 1px solid $c-gold;
+  border-radius: 999px;
+  font-size: 12px;
+  color: $c-gold-light;
+}
+
+/* ---------- pagination ---------- */
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 20px;
+
+  a {
+    padding: 6px 14px;
+    border: 1px solid $c-border-color;
+    border-radius: 8px;
+
+    &:hover,
+    &.active {
+      color: $wine-dark;
+      background: $c-gold-light;
+    }
+  }
+}
+
+/* ---------- contacts page ---------- */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  form {
+    margin: 0;
+  }
+}
+
+.details-list {
+  margin: 0 0 25px;
+
+  dt {
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $c-gray-text;
+  }
+
+  dd {
+    margin: 3px 0 0;
+    font-size: 17px;
+  }
+
+  @media (min-width: $bp) {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 12px 16px;
+
+    dt,
+    dd {
+      margin: 0;
+    }
+  }
+}
+
+/* on mobile, every table row becomes a small card */
+@media (max-width: 767px) {
+  .contacts-table {
+    &,
+    tbody,
+    tr,
+    td {
+      display: block;
+      width: 100%;
+    }
+
+    thead {
+      position: absolute;
+      left: -9999px;
+    }
+
+    tr {
+      margin-bottom: 16px;
+      border: 1px solid $c-border-color;
+      border-radius: $c-radius;
+    }
+
+    td {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      text-align: right;
+
+      &::before {
+        content: attr(data-label);
+        font-weight: 600;
+        text-align: left;
+        color: $c-gray-text;
+      }
+    }
+  }
+}

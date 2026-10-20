@@ -1,0 +1,10 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass --watch scss:css"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}
